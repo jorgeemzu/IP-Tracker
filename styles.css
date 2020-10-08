@@ -1,0 +1,120 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--black: hsl(0, 0%, 17%);
+	--gray: hsl(0, 0%, 59%);
+}
+
+body {
+	font-size: 18px;
+	font-family: 'Rubik', sans-serif;
+	color: var(--black);
+	text-align: center;
+}
+
+header {
+	background-image: url('images/pattern-bg.png');
+	background-repeat: no-repeat;
+	background-attachment: cover;
+	background-position: top;
+	padding: 2em 0;
+}
+
+.container {
+	width: 85%;
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+h1 {
+	color: white;
+	font-size: 1.8rem;
+	margin-bottom: 1em;
+}
+
+.input__field {
+	position: relative;
+	border-radius: 15px;
+	margin-bottom: 1em;
+	overflow: hidden;
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	cursor: pointer;
+}
+
+input {
+	width: 100%;
+	padding: 1.5em 2em;
+	position: relative;
+	border-radius: 15px;
+	border: solid 1px var(--black);
+	color: var(--black);
+	font-weight: 700;
+	cursor: pointer;
+	outline: none;
+}
+
+input::placeholder {
+	color: var(--gray);
+	font-weight: 500;
+}
+
+button {
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 100%;
+	width: 50px;
+	background-color: black;
+	border: none;
+	cursor: pointer;
+	transition: all 0.5s;
+}
+
+button:hover {
+	background-color: var(--gray);
+}
+
+.ip__info {
+	background-color: white;
+	padding: 2em 1em;
+	border-radius: 15px;
+	position: absolute;
+	z-index: 10;
+	width: 85%;
+	max-width: 1100px;
+	left: 50%;
+	transform: translate(-50%, -35px);
+	box-shadow: 2px 2px 30px -8px rgba(0, 0, 0, 0.4);
+}
+
+/* .info + .info {
+	margin-top: 1em;
+} */
+
+.info p {
+	font-size: 0.7rem;
+	font-weight: 700;
+	color: var(--gray);
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	margin-bottom: 0.5em;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	gap: 1em;
+}
+
+#mapid {
+	height: 700px;
+	position: relative;
+	z-index: 2;
+}
